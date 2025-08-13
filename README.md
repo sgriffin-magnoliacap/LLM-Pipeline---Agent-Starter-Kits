@@ -1,6 +1,6 @@
 ## LLM Pipeline & Agent Starter Kits
 
-To me, an An LLM pipeline runs LLM calls in a fixed order, while an agent uses an LLM to choose and run tools in whatever order is needed to complete a task.
+To me, an LLM pipeline runs LLM calls in a fixed order, while an agent uses an LLM to choose and run tools in whatever order is needed to complete a task.
 
 This repo includes simple, batteries‑included starters to:
 - call LLMs directly for common tasks (LLM Pipeline Starter Kit)
