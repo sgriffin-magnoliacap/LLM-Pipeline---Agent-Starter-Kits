@@ -37,9 +37,6 @@ analyze-image-base64:
   model_name: gpt-4o
 analyze-pdf-base64:
   model_name: gpt-4o
-analyze-audio-base64:
-  model_name: o3
-
 
 # Max retries for LLM calls
 max_retries: 3
