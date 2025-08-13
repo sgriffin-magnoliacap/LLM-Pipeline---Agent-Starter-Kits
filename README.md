@@ -1,13 +1,12 @@
 ## LLM Pipeline & Agent Starter Kits
 
-To me, an LLM pipeline runs LLM calls in a fixed order, while an agent uses an LLM to choose and run tools in whatever order is needed to complete a task.
+Per Anthropic, **workflows** are systems where LLMs and tools are orchestrated through predefined code paths, while **agents** are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.
 
 This repo includes simple, batteries‑included starters to:
-- call LLMs directly for common tasks (LLM Pipeline Starter Kit)
+- call LLMs directly for common tasks (Workflow Starter Kit)
 - build an agent that can use tools (Agent Starter Kit)
 
 Both kits use a shared, YAML‑driven model configuration and environment‑based API keys. You can use OpenAI by default, optionally X.ai (Grok) models, and optionally Tavily for internet search.
-
 
 ## Repository layout
 
@@ -24,7 +23,7 @@ LLM Pipeline & Agent Starter Kits/
   │  ├─ example_assets/      # Sample files (image/pdf)
   │  └─ example_usage.py     # End-to-end agent demo
   │
-  └─ LLM Pipeline Starter Kit/
+  └─ Workflow Starter Kit/
      ├─ llm/
      │  ├─ tasks.py          # Async functions: analyze_text/webpage/image/pdf
      │  ├─ factory.py        # Constructs chat models from YAML config
@@ -90,7 +89,7 @@ pip install langchain langchain-tavily httpx pydantic python-dotenv pyyaml opena
 Both kits load a YAML file to decide which model/provider to use for each task.
 
 - Agent kit: `Agent Starter Kit/agent/models.yaml`
-- Pipeline kit: `LLM Pipeline Starter Kit/llm/models.yaml`
+- Workflow kit: `Workflow Starter Kit/llm/models.yaml`
 
 Each YAML contains:
 - `available_models`: model metadata, including `provider` (e.g., `openai`, `xai`) and optional `temperature` and `reasoning_effort`.
@@ -110,7 +109,7 @@ python "Agent Starter Kit/example_usage.py"
 
 - LLM pipeline demo (direct task calls):
 ```powershell
-python "LLM Pipeline Starter Kit/example_usage.py"
+python "Workflow Starter Kit/example_usage.py"
 ```
 
 What the demos do:
@@ -125,5 +124,5 @@ What the demos do:
 
 - Change models per task: edit the relevant `models.yaml` and update the `model_name` under each task. Ensure you have the corresponding API key in `.env`.
 - Add or modify tools (Agent kit): edit `Agent Starter Kit/agent/tools.py`. Tools are defined with `@tool` and can call `get_llm_for("tool-<name>")` for separate model settings.
-- Add new pipeline tasks: add async functions to `LLM Pipeline Starter Kit/llm/tasks.py` and wire them to a task name in `models.yaml`.
+- Add new pipeline tasks: add async functions to `Workflow Starter Kit/llm/tasks.py` and wire them to a task name in `models.yaml`.
 
