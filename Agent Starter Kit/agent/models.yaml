@@ -1,0 +1,42 @@
+# Available models and their host/provider
+available_models:
+  grok-3-mini:
+    model_name: grok-3-mini
+    provider: xai
+    temperature: 0.0
+    multimodal: false
+  o3-mini:
+    provider: openai # only allows temp of 1, optional reasoning_effort: high parameter
+    temperature: 1
+    reasoning_effort: high
+  o4-mini:
+    provider: openai # only allows temp of 1, optional reasoning_effort: high parameter
+    temperature: 1
+    multimodal: true
+  gpt-4o:
+    provider: openai
+    temperature: 0.0
+    multimodal: true
+  o3:
+    provider: openai
+    temperature: 0.0
+    multimodal: true
+
+# Tasks and their model
+default:
+  model_name: o3-mini
+agent-core:
+  model_name: o3-mini
+tool-web-browse:
+  model_name: o4-mini
+tool-read-webpage:
+  model_name: o4-mini
+tool-analyze-image:
+  model_name: gpt-4o
+tool-analyze-pdf:
+  model_name: gpt-4o
+tool-text-summary:
+  model_name: o3-mini
+
+# Max retries for LLM calls
+max_retries: 3

@@ -7,6 +7,7 @@ async def main():
     # Analyze text
     analysis = await analyze_text("Hello, world!")
     print("Analysis:", analysis)
+    print("--------------------------------")
 
     # Analyze webpage
     example_webpage_url = "https://www.fox32chicago.com/sports/cubs-lose-blue-jays-5-1"
@@ -14,12 +15,14 @@ async def main():
     print("Title:", title)
     print("Description:", description)
     print("Key objects:", key_objects)
+    print("--------------------------------")
 
     # Analyze image from URL
     example_image_url = "https://catinaflat.blog/wp-content/uploads/2024/03/happy-cat.jpg"
     description, key_objects = await analyze_image_url(example_image_url)
     print("Description:", description)
     print("Key objects:", key_objects)
+    print("--------------------------------")
 
     # Analyze image from local file
     example_image_file = "LLM Pipeline Starter Kit\example_assets\happy-cat.jpg"
@@ -28,6 +31,7 @@ async def main():
     description, key_objects = await analyze_image_base64(image_base64, "image/jpeg")
     print("Description:", description)
     print("Key objects:", key_objects)
+    print("--------------------------------")
 
     # Analyze PDF from local file
     example_pdf_file = "LLM Pipeline Starter Kit\example_assets\declaration-of-independence.pdf"
@@ -36,6 +40,7 @@ async def main():
     description, key_objects = await analyze_pdf_base64(pdf_base64)
     print("Description:", description)
     print("Key objects:", key_objects)
+    print("--------------------------------")
 
     # Analyze PDF from URL
     example_pdf_url = "https://docs.house.gov/meetings/GO/GO00/20220929/115171/HHRG-117-GO00-20220929-SD010.pdf"
