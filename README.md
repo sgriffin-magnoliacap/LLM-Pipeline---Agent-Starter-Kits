@@ -1,8 +1,10 @@
 ## LLM Pipeline & Agent Starter Kits
 
-Simple, batteries‑included starters to:
-- build an agent that can use tools (Agent Starter Kit)
+To me, an An LLM pipeline runs LLM calls in a fixed order, while an agent uses an LLM to choose and run tools in whatever order is needed to complete a task.
+
+This repo includes simple, batteries‑included starters to:
 - call LLMs directly for common tasks (LLM Pipeline Starter Kit)
+- build an agent that can use tools (Agent Starter Kit)
 
 Both kits use a shared, YAML‑driven model configuration and environment‑based API keys. You can use OpenAI by default, optionally X.ai (Grok) models, and optionally Tavily for internet search.
 
