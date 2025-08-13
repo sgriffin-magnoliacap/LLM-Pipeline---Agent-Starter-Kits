@@ -1,4 +1,4 @@
-## LLM Pipeline & Agent Starter Kits
+## Workflow & Agent Starter Kits
 
 Per Anthropic, **workflows** are systems where LLMs and tools are orchestrated through predefined code paths, while **agents** are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.
 
